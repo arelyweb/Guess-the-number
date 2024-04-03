@@ -1,0 +1,15 @@
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\bin\Debug\net8.0\Guess-the-number.exe
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\bin\Debug\net8.0\Guess-the-number.deps.json
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\bin\Debug\net8.0\Guess-the-number.runtimeconfig.json
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\bin\Debug\net8.0\Guess-the-number.dll
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\bin\Debug\net8.0\Guess-the-number.pdb
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\Guess-the-number.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\Guess-the-number.AssemblyInfoInputs.cache
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\Guess-the-number.AssemblyInfo.cs
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\Guess-the-number.csproj.CoreCompileInputs.cache
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\Guess-the-number.sourcelink.json
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\Guess-the-number.dll
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\refint\Guess-the-number.dll
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\Guess-the-number.pdb
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\Guess-the-number.genruntimeconfig.cache
+C:\Users\agonzalez\Documents\csharp\Guess-the-number\obj\Debug\net8.0\ref\Guess-the-number.dll
