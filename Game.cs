@@ -7,47 +7,63 @@ namespace Guess_the_number;
 
  class Game {
     
+   private int numRan {get;set;}
+   private Player Player {get;set;} 
 
-    private int numSecret;
-    
-   public int NumSecret
+    public Game(string jugadora)
     {
-        get { return numSecret; }
-        set { numSecret = value; }
-    }
-    
-    public Game(int ns)
-    {
-        this.NumSecret = ns;
-        Player py = new Player("John");
+        RandomNumberGenerator();
+        Player = new Player(jugadora);
         
     }
     /*
     Funcion que genera un numero aleatorio del 1 al 100
     */
-   public static int GeneraNumAleatorio(){
-    
-        Random numRan= new Random ();
+    private void RandomNumberGenerator(){
+        Random ran= new Random ();
  
             //Genera un numero entre 10 y 100 (101 no se incluye)
-            return numRan.Next (0,101);
+           numRan = ran.Next (1,101);
+    }
+    
+    private bool CheckGuess(int numSecreto, int intento){
+
+         bool res= false;
+
+        if (intento == numSecreto){
+          Console.WriteLine($"{Environment.NewLine}¡divinaste!, eres un genio.");
+          res= true;
+        }else if(intento > numSecreto){
+          Console.WriteLine($"{Environment.NewLine}El número secreto es menor.");
+        }else{
+          Console.WriteLine($"{Environment.NewLine}El número secreto es mayor.");
+        }
+      return res;
 
     }
 
-    public static void inciaJuego(int numSecreto){
+    public void inciaJuego(){
 
-        int x = 1;
-        bool res;
+       int intento = Player.MakeGuess();
 
-        do{ 
-        Console.WriteLine($"{Environment.NewLine}Ingresa tu {x.ToString()}° intento.");
-        string intento = Console.ReadLine();  
-        res = Player.MakeGuess(numSecreto,Int32.Parse(intento));
-        x++;
-       }while(x<4 && !res);
-       
-       Console.WriteLine($"{Environment.NewLine}EL número secreto era {numSecreto}");
-         
+       int x = 5;
+
+       do{
+         if (intento == numRan){
+          Console.WriteLine($"{Environment.NewLine}¡Adivinaste!, eres un genio.");
+          x=0;
+        }else if(intento > numRan){
+          Console.WriteLine($"{Environment.NewLine}El número secreto es menor.");
+          intento = Player.MakeGuess(); 
+          x--;
+        }else{
+          Console.WriteLine($"{Environment.NewLine}El número secreto es mayor.");
+          intento = Player.MakeGuess(); 
+          x--;
+        }
+        
+       }while(x>0);
+
     }
 
 }

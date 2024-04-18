@@ -7,11 +7,13 @@ class Program
   
     static void Main(string[] args)
     {
-      int numRan = Game.GeneraNumAleatorio();
-      Console.WriteLine("Reglas del juego:Tienes dos intentos para adivinar el número ");
+      Console.WriteLine("Reglas del juego:Tienes dos intentos para adivinar el número del 1 al 100");
       Console.WriteLine("y se te indicará que tan cerca o lejos quedaste. ¡SUERTE!");
+      Console.WriteLine("Ingresa tu nombre:");
+      string? nombre = Console.ReadLine();
       
-      Game.inciaJuego(numRan);
+      Game iJuego = new(nombre);
+      iJuego.inciaJuego();
      
       Console.Write($"{Environment.NewLine}Press any key to exit...");
       Console.ReadKey(true);

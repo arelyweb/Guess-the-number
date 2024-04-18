@@ -1,46 +1,40 @@
 using System;
+using System.Diagnostics.Tracing;
 using System.Security;
 using Microsoft.VisualBasic;
 
 namespace Guess_the_number;
 
  class Player{
-
-    private string nombre;
-    private int intento;
+ 
    
-    public string Nombre
-    {
-        get { return nombre; }
-        set { nombre = value; }
-    }
+    public string Nombre { get ; set ; }
 
-     public int Intento
-    {
-        get { return intento; }
-        set { intento = value; }
-    }
+     private int _Intento {get; set ; }
 
     public Player(string nombre)
     {
-        this.Nombre = nombre;
-        this.Intento = 0;
+        Nombre = nombre;
+        _Intento = 0;
     }
 
-    public static bool MakeGuess(int numSecreto,int intento){
-
-      bool res= false;
-
-        if (intento == numSecreto){
-          Console.WriteLine($"{Environment.NewLine}¡divinaste!, eres un genio.");
-          res= true;
-        }else if(intento > numSecreto){
-          Console.WriteLine($"{Environment.NewLine}El número secreto es menor.");
+    public int MakeGuess(){
+      
+     
+        Console.WriteLine($"{Environment.NewLine} {Nombre} ingresa tu intento.");
+  
+        if( int.TryParse(Console.ReadLine(), out int num) ){
+            return num;
         }else{
-          Console.WriteLine($"{Environment.NewLine}El número secreto es mayor.");
+           Console.WriteLine($"{Environment.NewLine} {Nombre} ingresa un intento válido.");
+            return MakeGuess();
         }
-      return res;
+    
 
+    }
+
+    public void GetLastGuess(){
+      Console.WriteLine($"Tu último intento fue: {_Intento}");
     }
 
 
